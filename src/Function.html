@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Function</title>
+
+    <script>
+        //创建方式1
+        var fun = new Function("a","b","alert(a);");
+        //调用
+        fun(3);  //3
+        fun(); //undefind
+        alert(fun.length); //2
+
+        //创建方式2
+        function fun2(a,b) {
+            alert(a+b);
+        }
+        //调用
+        fun2(5,7);  //12
+
+        //求任意数的和
+        function add() {
+            var sum = 0;
+            for(var i = 0;i<arguments.length;i++){
+                sum += arguments[i];
+            }
+            return sum;
+        }
+        alert(add(1,2,3,4)); //10
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

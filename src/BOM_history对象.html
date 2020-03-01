@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>history对象</title>
+</head>
+<body>
+    <input type="button" id="btn" value="获取历史记录个数">
+    <a href="练习-轮播图.html">轮播图页面</a>
+    <input type="button" id="forward" value="前进">
+
+    <script>
+        //获取按钮
+        var btn = document.getElementById("btn");
+        //定义单机事件
+        btn.onclick = function () {
+            var his = history.length;
+            alert(his);
+        }
+
+        var forward = document.getElementById("forward");
+        //页面前进
+        forward.onclick = function () {
+            history.forward();
+            history.go(1);
+
+        }
+    </script>
+
+</body>
+</html>

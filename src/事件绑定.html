@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>事件绑定</title>
+
+    <img id="plane" src="img/战斗机.jpg" onclick="fun();">
+    <img id="plane2" src="img/战斗机2.jpg">
+
+    <script>
+        function fun() {
+            alert("图片被点击");
+            alert("点击完成");
+        }
+        function fun2() {
+            alert("再点第二张图片")
+        }
+
+        //通过获取图片对象
+        var plane2 = document.getElementById("plane2");
+        plane2.onclick = fun2;  //不加括号，正常绑定事件，触发后再执行
+        plane2.onclick = fun2();  //加括号，调用直接执行
+    </script>
+</head>
+<body>
+
+</body>
+</html>

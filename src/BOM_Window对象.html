@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>window对象</title>
+
+</head>
+<body>
+    <input id="openbtn" type="button" value="打开窗口">
+    <input id="closebtn" type="button" value="关闭窗口">
+
+    <script>
+/*        //confirm
+        var flag = confirm("确定要退出吗");
+        if(flag){
+            //如果点击确定，返回true
+            alert("退出成功");
+        }else {
+            //点击取消，返回false
+            alert("未退出，已返回");
+        }
+
+        //prompt
+        var comm = prompt("请输入内容");
+        alert(comm);*/
+
+        //打开新窗口
+        var openbtn = document.getElementById("openbtn");
+        var baidu;
+        openbtn.onclick = function () {
+              baidu = open("http://www.baidu.com");
+        }
+        //关闭窗口
+        var closebtn = document.getElementById("closebtn");
+        closebtn.onclick = function () {
+            //关闭刚刚打开的百度窗口,谁调用就关闭谁
+            baidu.close();
+        }
+
+        //一次性定时器
+        function fun() {
+            alert("噼里啪啦....")
+        }
+        //setTimeout("fun();",2000); //2秒后弹出
+        var bom = setTimeout(fun,2000);
+        clearTimeout(bom); //清除了定时弹框
+
+        //循环定时器
+        setInterval(fun,2000); //每两秒弹出一次
+
+        //获取history
+        var h1 = history;
+        alert(h1);
+
+    </script>
+</body>
+</html>

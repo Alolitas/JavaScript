@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>蜡烛</title>
+
+    <img id="candle" src="img/熄灭的蜡烛.jpg" onclick="fun();">
+
+    <script>
+        //获取元素
+        var candle = document.getElementById("candle");
+        //false为熄灭状态
+        var flag = false;
+        function fun() {
+            if(flag){
+                //如果蜡烛点亮的则灭掉
+                candle.src = "img/熄灭的蜡烛.jpg";
+                flag=false;
+            }else {
+                //如果蜡烛灭的则打开
+                candle.src = "img/点亮的蜡烛.jpg";
+                flag=true;
+            }
+
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>自动跳转</title>
+</head>
+<body>
+    <p align="center"><span id="time">5</span>秒之后跳转到首页</p>
+
+    <script>
+        var time = document.getElementById("time");
+        var second = 5;
+        function timechange() {
+            second--;
+            //时间如果小于等于0，跳转到首页
+            if (second<=0){
+                location.href="https://www.baidu.com";
+            }
+            time.innerText=second;
+        }
+        //定时器，1秒执行一次倒数
+        setInterval(timechange,1000);
+    </script>
+
+
+</body>
+</html>

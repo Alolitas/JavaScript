@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>RegExp</title>
+    <script>
+        //匹配abc开头的字符串
+       var rep = new RegExp("^\\babc"); //true
+       var string = "abchugdt";
+       alert(rep.test(string));
+       //匹配8位数字的QQ号码：
+        var rep2 = new RegExp("^\\d{8}$"); //true
+        var num = "95175912";
+        alert(rep2.test(num));
+        //匹配银行卡号14~18位的是数字：
+        var rep3 = new RegExp("^\\d{4,6}$");
+        var ka = "2343543234534233454426766";
+        alert(rep3.test(ka));
+        //匹配以a开头的，0个或多个b结尾的字符串
+        var rep4 = new RegExp("^ab*$");
+        var mm = "afsgangbbb";
+        alert(rep4.test(mm))
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

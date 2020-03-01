@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM获取元素对象</title>
+
+    <img id="plane" src="img/战斗机.jpg">
+    <h1 id="title">战斗机在飞</h1>
+
+    <script>
+        //通过id获取元素对象
+        var plane = document.getElementById("plane");
+        alert("更换图片...");
+        plane.src = "img/战斗机2.jpg"
+
+        //获取标题元素对象
+        var title = document.getElementById("title");
+        alert("更换标题...");
+        title.innerText = "变换机群";
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
